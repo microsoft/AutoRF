@@ -1,19 +1,14 @@
-# LLM4Surf
+# AutoRF
 
 **An agentic LLM framework for automated RF hardware design — starting with metasurfaces and antennas.**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Python 3.12+](https://img.shields.io/badge/python-3.12+-blue.svg)](https://www.python.org/)
 
-LLM4Surf turns a **natural-language design request** into a **RF
-hardware design**. Instead of training a large task-specific neural network on
-tens of thousands of expert-crafted samples, it uses the reasoning and few-shot
-learning abilities of Large Language Models (LLMs) to drive a circuit-model
-simulator and a full-wave electromagnetic (EM) simulator, iterating on a small
-library of design templates until the target specification is met.
+AutoRF turns a **natural-language design request** into a **RF hardware design**. Instead of training a large task-specific neural network on tens of thousands of expert-crafted samples, it uses the reasoning and few-shot learning abilities of Large Language Models (LLMs) to drive a circuit-model simulator and a full-wave electromagnetic (EM) simulator, iterating on a small library of design templates until the target specification is met.
 
 <p align="center">
-  <img src="docs/figures/workflow.png" alt="LLM4Surf overview" width="760"/>
+  <img src="docs/figures/workflow.png" alt="AutoRF overview" width="760"/>
 </p>
 
 ---
@@ -41,7 +36,7 @@ Given a demand such as:
 > *"Design a reflective passive metasurface for 120 GHz sub-THz wireless coverage
 > enhancement, using paper as substrate."*
 
-LLM4Surf produces a parameterized design and the corresponding HFSS project. From
+AutoRF produces a parameterized design and the corresponding HFSS project. From
 a handful of representative templates it can cover a wide design space, including:
 
 - **Operating frequency** from ~900 MHz to 160 GHz (and sub-THz)
@@ -56,10 +51,10 @@ a handful of representative templates it can cover a wide design space, includin
 ## How it works
 
 <p align="center">
-  <img src="docs/figures/system-overview.png" alt="LLM4Surf system workflow and modules" width="880"/>
+  <img src="docs/figures/system-overview.png" alt="AutoRF system workflow and modules" width="880"/>
 </p>
 
-LLM4Surf structures hardware design into **layered abstractions** — from
+AutoRF structures hardware design into **layered abstractions** — from
 high-level demands, to design specifications, to circuit models, to concrete
 parameterized designs — because LLMs reason most reliably within a single level
 of abstraction. The pipeline consists of three LLM-driven modules plus two design
@@ -79,7 +74,7 @@ Supporting components include a **design-rule database**
 ## Repository structure
 
 ```
-llm4surf/
+AutoRF/
 ├── main.py                     # Entry point: end-to-end design automation
 ├── prepare_design_lib.py       # Build/refresh the design-library summaries
 ├── get_started.py              # Minimal HFSS/AEDT connectivity smoke test
@@ -124,8 +119,8 @@ llm4surf/
 
 ```bash
 # 1. Clone
-git clone https://github.com/Rui-Chun/llm4surf.git
-cd llm4surf
+git clone https://github.com/microsoft/AutoRF.git
+cd AutoRF
 
 # 2. Create and activate a virtual environment
 python -m venv .venv
@@ -169,7 +164,7 @@ Edit `configs/system_config.yaml` to adjust the model, simulation limits
 (`max_iterations`, `timeout`), the HFSS version, and optimization weights.
 
 The HFSS workspace defaults to the `HFSS_workspace/` folder inside the repo. You
-can override it with the `LLM4SURF_HFSS_WORKSPACE` environment variable.
+can override it with the `AUTORF_HFSS_WORKSPACE` environment variable.
 
 ## Running a demo
 

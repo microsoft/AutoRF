@@ -27,9 +27,9 @@ NG_MODE = False  # Open AEDT UI when it is launched.
 ND_MODE = False  # Run AEDT as a new desktop window.
 
 # Resolve the HFSS workspace folder relative to the repository root so the code
-# is portable across machines. Override with the LLM4SURF_HFSS_WORKSPACE env var.
+# is portable across machines. Override with the AUTORF_HFSS_WORKSPACE env var.
 WORK_PLACE_FOLDER = os.environ.get(
-    "LLM4SURF_HFSS_WORKSPACE",
+    "AUTORF_HFSS_WORKSPACE",
     os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "HFSS_workspace"),
 )
 
