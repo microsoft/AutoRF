@@ -29,7 +29,7 @@ library of design templates until the target specification is met.
 - [Running a demo](#running-a-demo)
 - [Extending the framework](#extending-the-framework)
 - [Notes & limitations](#notes--limitations)
-- [Citation](#citation)
+- [Transparency](#transparency)
 - [License](#license)
 
 ---
@@ -220,6 +220,13 @@ python get_started.py                   # minimal AEDT connectivity check
   design reviewer and iteration loop mitigate but do not eliminate this.
 - This is a research prototype. Always verify generated designs before
   fabrication.
+
+
+## Transparency
+
+For this project's intended uses, capabilities, limitations, and the
+responsible-AI considerations behind it, see the
+[Transparency Note](9820_AutoRF_transparency.pdf).
 
 
 ## License
