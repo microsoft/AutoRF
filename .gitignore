@@ -1,0 +1,40 @@
+# --- Secrets ---
+.env
+api_keys.txt
+quick-notes.md
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv*/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# --- OS / IDE ---
+.DS_Store
+.vscode/
+.idea/
+
+# --- Ansys HFSS / AEDT generated artifacts ---
+*.aedtresults
+*.aedt.lock
+*.lock
+*.asol
+*.batchinfo/
+*_pyaedt*.log
+HFSS_workspace/sim_figs/
+HFSS_workspace/saved_good_designs/
+
+# --- Local scratch / test files ---
+test_*
+*.pkl.bak
+logs/
+
+# --- Paper / evaluation artifacts (not part of the public release) ---
+evaluation/
+experiment-data/
+hfss_surf_export/
+pyAEDT_examples/
+design_library/paper_pdf/

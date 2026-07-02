@@ -1,0 +1,202 @@
+my_examples:
+  - id: "SURF001"
+    demand: "Design a reflective passive metasurface for 120GHz band subTHz wireless coverage enhancement, using paper as substrate."
+    categories: ["surface"]
+    tags: ["easy", "freq-band-tuning"]
+    difficulty: "easy"
+    description: "Standard frequency band tuning metasurface design case, based on AutoMS"
+    expected_specs:
+      frequency_range: [77, 81]
+      phase_range: [0, 300]
+      material: "paper"
+      layers: 1
+    expected_template: "automs"
+
+  - id: "SURF001"
+    demand: "Design a reflective passive metasurface for 150 - 170 GHz subTHz wireless coverage enhancement, using paper as substrate."
+    categories: ["surface"]
+    tags: ["easy", "freq-band-tuning"]
+    difficulty: "easy"
+    description: "Standard frequency band tuning metasurface design case, based on AutoMS"
+    expected_specs:
+      frequency_range: [77, 81]
+      phase_range: [0, 300]
+      material: "paper"
+      layers: 1
+    expected_template: "automs"
+
+  - id: "SURF001"
+    demand: "Design a reflective passive metasurface for 77-81 GHz mmWave radars, using paper as substrate."
+    categories: ["surface"]
+    tags: ["easy", "freq-band-tuning"]
+    difficulty: "easy"
+    description: "Standard frequency band tuning metasurface design case, based on AutoMS"
+    expected_specs:
+      frequency_range: [77, 81]
+      phase_range: [0, 300]
+      material: "paper"
+      layers: 1
+    expected_template: "automs"
+
+  - id: "SURF001"
+    demand: "Design a reflective passive metasurface for 77-81 GHz mmWave radar sensing signal control, using FR4 substrate."
+    categories: ["surface"]
+    tags: ["easy", "freq-band-tuning"]
+    difficulty: "easy"
+    description: "Standard frequency band tuning metasurface design case, based on AutoMS"
+    expected_specs:
+      frequency_range: [77, 81]
+      phase_range: [0, 300]
+      material: "paper"
+      layers: 1
+    expected_template: "automs"
+
+  - id: "SURF001"
+    demand: "Design a reflective passive metasurface for 230GHz - 240GHz sub-THz wireless coverage enhancement"
+    categories: ["surface"]
+    tags: ["easy", "freq-band-tuning"]
+    difficulty: "easy"
+    description: "Standard frequency band tuning metasurface design case, based on AutoMS"
+    expected_specs:
+      frequency_range: [230, 240]
+      phase_range: [0, 300]
+      material: "paper"
+      layers: 1
+    expected_template: "automs"
+
+  - id: "SURF001"
+    demand: "Design a reflective passive metasurface for 24GHz mmWave cellular coverage enhancement"
+    categories: ["surface"]
+    tags: ["easy", "freq-band-tuning"]
+    difficulty: "easy"
+    description: "Standard frequency band tuning metasurface design case, based on AutoMS"
+    expected_specs:
+      frequency_range: [24, 24.5]
+      phase_range: [0, 270]
+      material: "paper"
+      layers: 1
+    expected_template: "automs"
+
+  - id: "SURF002"
+    demand: "Design a reflective passive metasurface for 240GHz beam steering"
+    categories: ["surface"]
+    tags: ["easy", "freq-band-tuning"]
+    difficulty: "easy"
+    description: "Standard frequency band tuning metasurface design case, based on AutoMS"
+    expected_specs:
+      frequency_range: [235, 240]
+      phase_range: [0, 270]
+      material: "paper"
+      layers: 1
+    expected_template: "automs"
+
+
+  - id: "SURF003"
+    demand: "Design a reflective passive metasurface for 24GHz mmWave cellular coverage enhancement with FR4 substrate"
+    categories: ["surface"]
+    tags: ["easy", "freq-band-tuning"]
+    difficulty: "easy"
+    description: "Standard frequency band tuning metasurface design case, based on AutoMS"
+    expected_specs:
+      frequency_range: [24, 24.5]
+      phase_range: [0, 270]
+      material: "FR4"
+      layers: 1
+    expected_template: "automs"
+
+  
+  - id: "SURF004"
+    demand: "Design a transmissive metasurface for wifi7 coverage enhancement under dynamic scenarios."
+    categories: ["surface"]
+    tags: ["easy", "freq-band-tuning"]
+    difficulty: "easy"
+    description: "Standard freuqnecy band tuning metasurface design case, based on RF-Mediator"
+    expected_specs:
+      frequency_range: [5, 7]
+      phase_range: [0, 360]
+      material: "FR4"
+      layers: 3
+    expected_template: "rf-mediator"
+  
+
+  - id: "SURF003"
+    demand: "Design a reflective metasurface for 6GHz wifi7 coverage enhancement based on beamforming"
+    categories: ["surface"]
+    tags: ["easy", "trans-reflec-change"]
+    difficulty: "easy"
+    description: "transmissive to reflective, based on RF-Mediator"
+    expected_specs:
+      frequency_range: [6, 7]
+      phase_range: [0, 180]
+      material: "FR4"
+      layers: 3
+    expected_template: "rf-mediator"
+
+  - id: "SURF004"
+    demand: "Design a reflective metasurface for 60GHz coverage enhancement supporting FR4 substrate"
+    categories: ["surface"]
+    tags: ["easy", "subsrate-change"]
+    difficulty: "easy"
+    description: "changing subsrate, based on AutoMS"
+    expected_specs:
+      frequency_range: [60]
+      phase_range: [0, 180]
+      material: "FR4"
+      layers: 3
+    expected_template: "automs"
+
+  - id: "ANT001"
+    demand: "Design a wideband antenna covering wifi, starlink and 24GHz mmWave cellular bands"
+    categories: ["antenna"]
+    tags: ["easy", "freq-band-tuning"]
+    difficulty: "easy"
+    description: "Standard freuqnecy band tuning metasurface design case, based on vivaldi antenna"
+    expected_specs:
+      frequency_range: [5, 26]
+      material: "FR4"
+      layers: 2
+    expected_template: "vivaldi-ant"
+
+
+
+test_cases:
+  - id: "ANT001"
+    demand: "Design a high-gain metasurface antenna for 5G applications at 28 GHz with circular polarization"
+    categories: ["antenna"]
+    tags: ["5G", "high-gain", "circular-polarization"]
+    difficulty: "medium"
+    description: "Standard 5G antenna design case"
+    expected_specs:
+      frequency_range: [27.5, 28.5]
+      polarization: "CIRCULAR"
+      gain_requirement: 15.0
+      bandwidth: 0.2
+      material: "Rogers4350B"
+    expected_template: "circular_patch_array"
+
+  - id: "FIL001"
+    demand: "Create a bandpass filter metasurface for X-band satellite communications with 500MHz bandwidth"
+    categories: ["filter"]
+    tags: ["satellite", "bandpass", "X-band"]
+    difficulty: "hard"
+    description: "Satellite communication filter design"
+    expected_specs:
+      frequency_range: [7.5, 8.0]
+      bandwidth: 0.5
+      insertion_loss: -1.0
+      rejection: -20.0
+      material: "Rogers5880"
+    expected_template: "coupled_resonator_array"
+
+  - id: "POL001"
+    demand: "Design a linear-to-circular polarization converter for 2.4 GHz WiFi applications"
+    categories: ["polarizer"]
+    tags: ["wifi", "polarization-converter"]
+    difficulty: "medium"
+    description: "WiFi polarization converter"
+    expected_specs:
+      frequency_range: [2.4, 2.5]
+      polarization_ratio: 0.9
+      insertion_loss: -0.5
+      material: "FR4"
+    expected_template: "meander_line_polarizer"

@@ -1,0 +1,43 @@
+# Demand Translation Prompt Templates
+
+templates:
+  base_translation:
+    description: "Basic template for translating natural language demands"
+    template: |
+      Convert this high-level metasurface design demand into precise specifications:
+      
+      User Demand: {user_demand}
+      
+      Provide specifications in the following format:
+      - Frequency range in GHz
+      - Polarization type
+      - Gain requirement in dB
+      - Bandwidth (fractional)
+      - Material selection
+      - Additional constraints
+    expected_format:
+      frequency_range: [min_freq, max_freq]
+      polarization: "LINEAR|CIRCULAR|ELLIPTICAL"
+      gain_requirement: float
+      bandwidth: float
+      material: string
+      additional_constraints: dict
+
+  advanced_translation:
+    description: "Detailed template with performance requirements"
+    template: |
+      Analyze the following metasurface design requirement and provide detailed specifications:
+      
+      User Demand: {user_demand}
+      Application Context: {application_context}
+      Performance Priority: {performance_priority}
+      
+      Consider:
+      1. Operating environment
+      2. System integration requirements
+      3. Manufacturing constraints
+      4. Cost considerations
+    variables:
+      - user_demand
+      - application_context
+      - performance_priority
