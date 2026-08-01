@@ -88,7 +88,7 @@ pydantic==2.9.2
 pydantic_core==2.23.4
 pyedb==0.34.2
 Pygments==2.18.0
-PyJWT==2.10.1
+PyJWT==2.13.0
 pymsalruntime==0.17.1
 PyMuPDF==1.25.1
 pyparsing==3.2.0
