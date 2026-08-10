@@ -1,0 +1,36 @@
+llm:
+  model: gpt-4-turbo
+  temperature: 0.7
+  max_tokens: 2000
+paths:
+  design_library: design_library/metasurface_designs.yaml
+  simulation_results: results/simulations
+simulation:
+  max_iterations: 10
+  convergence_threshold: 0.95
+  timeout: 3600
+  parallel_sims: 4
+  hfss:
+    version: '2024.1'
+    non_graphical: true
+    default_units:
+      frequency: GHz
+      length: mm
+      angle: deg
+optimization:
+  weights:
+    gain: 0.3
+    bandwidth: 0.3
+    efficiency: 0.2
+    vswr: 0.2
+  parameter_bounds:
+    substrate_height:
+      min: 0.5
+      max: 3.0
+    patch_width:
+      min: 1.0
+      max: 20.0
+logging:
+  level: INFO
+  format: '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+  file: logs/design_automation.log
